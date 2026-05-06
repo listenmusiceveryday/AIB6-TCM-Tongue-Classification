@@ -12,7 +12,7 @@ link03: https://pmc.ncbi.nlm.nih.gov/articles/PMC12921053
 
 <p>ซึ่งก็เจอตัวนึงเป็น <b>Convolutional Neural Networks in Tongue Lesions</b> มี 2 ตัว คือ<br>
 1. <b>Binary Classification</b> ซึ่งความแม่นยำประมาณ 0.97 - 1.00 สูงมากครับ และ<br>
-2. <b>Multi-class Classification</b> แยกแยะ 3 กลุ่ม ความแม่นยำประมาณ 0.49 - 0.99 แต่พวกนี้คือแยกพวกลักษณะพื้นผิวบนลิ้นครับ</p><br>
+2. <b>Multi-class Classification</b> แยกแยะ 3 กลุ่ม ความแม่นยำประมาณ 0.49 - 0.99 แต่พวกนี้คือแยกพวกลักษณะพื้นผิวบนลิ้นครับ</p>
 
 link01: https://pmc.ncbi.nlm.nih.gov/articles/PMC12921053
 
