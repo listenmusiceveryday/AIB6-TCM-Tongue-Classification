@@ -19,3 +19,5 @@ link01: https://pmc.ncbi.nlm.nih.gov/articles/PMC12921053
 link01: https://pmc.ncbi.nlm.nih.gov/articles/PMC12025637
 
 - ลองคิด metrics แล้ว คิดว่าจะใช้ Precision, Recall, F1-score และ Accuracy เป็น metric ครับ และก็ Confusion Matrices
+
+- ลองไปศึกษาพวก Binary, Multi-label และ Multi-task ดูแล้ว และก็ไปเห็น paper ตัวนึงใช้ semantic segmentation นำมาคำนวน % พวกฝ้าบนลิ้นได้ (อันนี้เจ๋งมาก55555+) ตอนนี้ก็พอจะเห็นภาพในหัวแล้วว่าอยากจะให้ Project นี้ไปทางไหน
