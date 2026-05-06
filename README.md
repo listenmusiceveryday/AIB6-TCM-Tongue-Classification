@@ -1,12 +1,12 @@
 ## Week 4
 ### recap ทำอะไรไปแล้วบ้าง
-- ลองค้นหา dataset healthy มาเพิ่มดูครับ เพราะที่มีอยู่แล้ว มี healthy เพียงแค่ 11 รูป ใน train และผมเจอ dataset ทั้งหมด 3 ตัว ผมคิดว่าจะดึงแค่ตัว healthy มาเติมเต็ม
+- ลองค้นหา healthy tongue dataset มาเพิ่มดูครับ เพราะ healthy tongue ที่มีอยู่แล้วมีเพียงแค่ <em>11 รูป</em> ในโฟลเดอร์ train และผมเจอ dataset ทั้งหมด 3 ตัว ผมคิดว่าจะดึงแค่ตัว healthy tongue มาเติมเต็ม
 
-https://link.springer.com/article/10.1186/s12880-024-01234-3 
+link01: https://link.springer.com/article/10.1186/s12880-024-01234-3
 
-https://pmc.ncbi.nlm.nih.gov/articles/PMC12025637
+link02: https://pmc.ncbi.nlm.nih.gov/articles/PMC12025637
 
-https://pmc.ncbi.nlm.nih.gov/articles/PMC12921053
+link03: https://pmc.ncbi.nlm.nih.gov/articles/PMC12921053
 
 - ลองค้นหา Baseline ดูเรื่อยๆ ตอนนี้ยังไมได้ baseline ครับ (แต่ในความคิดอยากได้ Human Baseline ที่มาจากคุณหมอ) และผมลองหา Existing Models ดูระหว่างทางครับ<br>
 
