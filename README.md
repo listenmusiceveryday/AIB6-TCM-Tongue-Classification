@@ -12,10 +12,10 @@ link03: https://pmc.ncbi.nlm.nih.gov/articles/PMC12921053
 
 <p>ซึ่งก็เจอตัวนึงเป็น <b>Convolutional Neural Networks in Tongue Lesions</b> มี 2 ตัว คือ <b>Binary Classification</b> ซึ่งความแม่นยำประมาณ 0.97 - 1.00 สูงมากครับ และ <b>Multi-class Classification</b> แยกแยะ 3 กลุ่ม ความแม่นยำประมาณ 0.49 - 0.99 แต่พวกนี้คือแยกพวกลักษณะพื้นผิวบนลิ้นครับ</p>
 
-https://pmc.ncbi.nlm.nih.gov/articles/PMC12921053
+link01: https://pmc.ncbi.nlm.nih.gov/articles/PMC12921053
 
 <p>และก็เจอ <b>Detecting Coated Tongue with Convolutional Neural Networks</b> เป็น Binary Classification แยกฝ้าครับ ความแม่นยำ 0.85 เป็นแค่แยก 2 กลุ่มเท่านั้นครับ คือ เป็นฝ้า vs ไม่เป็นฝ้า แต่ในส่วนของ สีของฝ้า เขาไม่ได้ทำครับ</p>
 
-https://pmc.ncbi.nlm.nih.gov/articles/PMC12025637
+link01: https://pmc.ncbi.nlm.nih.gov/articles/PMC12025637
 
 - ลองคิด metrics แล้ว คิดว่าจะใช้ Precision, Recall, F1-score และ Accuracy เป็น metric ครับ และก็ Confusion Matrices
