@@ -141,7 +141,7 @@ def load_model(device='cpu'):
         import gdown
         
         # ← เปลี่ยนตรงนี้เป็น FILE_ID ของคุณ
-        FILE_ID = "PASTE_YOUR_FILE_ID_HERE"
+        FILE_ID = "1qtyzr0KhoqYmuG3d2BiakjmKNpq2se_Q"
         model_path = "model.pt"
         
         # Download ถ้ายังไม่มี
