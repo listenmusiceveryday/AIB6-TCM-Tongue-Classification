@@ -314,14 +314,14 @@ def main():
                 img_tensor = preprocess_image(image, transforms)
                 
                 # Predict
-                probabilities = predict(model, img_tensor, device)
+                probabilities = predict(model, img_tensor, device).astype(float)
                 
                 # Display results
                 st.divider()
                 st.subheader("📊 Classification Results")
                 
                 # Get predictions above threshold
-                predictions = probabilities > threshold
+                predictions = probabilities > float(threshold)
                 predicted_labels = [
                     CONFIG['label_columns'][i]
                     for i in range(len(CONFIG['label_columns']))
@@ -375,7 +375,7 @@ def main():
                         st.write(f"{prob:.1%}")
                     
                     with col3:
-                        st.progress(prob)
+                        st.progress(float(prob))
                 
                 st.divider()
                 
