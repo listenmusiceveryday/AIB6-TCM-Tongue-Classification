@@ -4,6 +4,7 @@ Based on ConvNeXt Small (328x328 input)
 Multi-label classification: 6 tongue features
 """
 
+import os
 import streamlit as st
 import torch
 import torch.nn as nn
@@ -135,40 +136,40 @@ class ConvNeXtClassifier(nn.Module):
 
 @st.cache_resource
 def load_model(device='cpu'):
-    """Load model from Google Drive"""
+    """Load model from Hugging Face Hub"""
     try:
-        # Download from Google Drive
-        import gdown
+        from huggingface_hub import hf_hub_download
         
-        # ← เปลี่ยนตรงนี้เป็น FILE_ID ของคุณ
-        FILE_ID = "PASTE_YOUR_FILE_ID_HERE"
-        model_path = "model.pt"
-        
-        # Download ถ้ายังไม่มี
-        if not os.path.exists(model_path):
-            url = f'https://drive.google.com/uc?id={FILE_ID}'
-            gdown.download(url, model_path, quiet=False)
-        
+        HF_REPO_ID = "somtamrich/tcm-tongue-classification-model"
+        # ชื่อไฟล์ .pt ใน repo ของคุณ (เปลี่ยนถ้าชื่อต่างออกไป)
+        MODEL_FILENAME = "best_model.pt"
+
+        with st.spinner(f"⬇️ Downloading model from Hugging Face ({MODEL_FILENAME})..."):
+            model_path = hf_hub_download(
+                repo_id=HF_REPO_ID,
+                filename=MODEL_FILENAME,
+            )
+
         # Load checkpoint
         checkpoint = torch.load(model_path, map_location=device, weights_only=False)
-        
+
         # Initialize model
         model = ConvNeXtClassifier(
             model_name=CONFIG['model_name'],
             num_labels=CONFIG['num_labels'],
-            pretrained=False,  # We're loading trained weights
+            pretrained=False,
             dropout=0.3
         )
-        
+
         # Load weights
         if isinstance(checkpoint, dict) and 'model_state_dict' in checkpoint:
             model.load_state_dict(checkpoint['model_state_dict'])
         else:
             model.load_state_dict(checkpoint)
-        
+
         model.to(device)
         model.eval()
-        
+
         return model
     except Exception as e:
         st.error(f"❌ Error loading model: {e}")
@@ -270,32 +271,13 @@ def main():
     
     # Load model
     model_placeholder = st.empty()
-    
+
     with model_placeholder.container():
-        with st.spinner("🔄 Loading model..."):
-            # Try to load from different possible paths
-            model_paths = [
-                "model.pt",
-                "best_model.pt",
-                "./best_model.pt",
-            ]
-            
-            model = None
-            for path in model_paths:
-                try:
-                    model = load_model(path, device=device)
-                    if model is not None:
-                        break
-                except:
-                    continue
-            
-            if model is None:
-                st.error(
-                    "❌ Model file not found. Please ensure 'model.pt' or 'best_model.pt' "
-                    "is in the same directory as this app."
-                )
-                st.info("📝 Expected files: `model.pt` or `best_model.pt`")
-                st.stop()
+        model = load_model(device=device)
+
+        if model is None:
+            st.error("❌ ไม่สามารถโหลดโมเดลได้ กรุณาตรวจสอบ HuggingFace repo และชื่อไฟล์")
+            st.stop()
     
     model_placeholder.success("✅ Model loaded successfully!")
     
