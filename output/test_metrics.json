@@ -1,0 +1,12 @@
+{
+  "exact_match": 0.6242038216560509,
+  "hamming_loss": 0.1173036093418259,
+  "f1_micro": 0.8397389412617839,
+  "f1_macro": 0.839871486795463,
+  "f1_weighted": 0.8415529332818421,
+  "precision_micro": 0.8379160636758322,
+  "recall_micro": 0.8415697674418605,
+  "loss": 0.47693840265274046,
+  "model_name": "convnext_small",
+  "img_size": 328
+}
