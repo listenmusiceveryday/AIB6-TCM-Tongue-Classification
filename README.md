@@ -6,3 +6,6 @@ https://medium.com/@nongsea/tcm-tongue-classification-64dc32307dfb
 
 # Deployment
 https://tcm-tongue-classification.streamlit.app/
+
+# Model
+https://huggingface.co/somtamrich/tcm-tongue-classification-model
