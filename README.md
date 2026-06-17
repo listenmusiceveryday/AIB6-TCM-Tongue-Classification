@@ -12,8 +12,8 @@ https://huggingface.co/somtamrich/tcm-tongue-classification-model
 
 # Dataset Source
 
-https://datadryad.org/dataset/doi:10.5061/dryad.1c59zw48r
-https://universe.roboflow.com/tongue-diseases/geographic-tongue-7qrau
-https://universe.roboflow.com/yohanes-nuwara/tongue-health
-https://universe.roboflow.com/medical-wmypr/tongue-tod5c
+https://datadryad.org/dataset/doi:10.5061/dryad.1c59zw48r<br>
+https://universe.roboflow.com/tongue-diseases/geographic-tongue-7qrau<br>
+https://universe.roboflow.com/yohanes-nuwara/tongue-health<br>
+https://universe.roboflow.com/medical-wmypr/tongue-tod5c<br>
 https://universe.roboflow.com/trash-t2ktr/tongue-93kco
